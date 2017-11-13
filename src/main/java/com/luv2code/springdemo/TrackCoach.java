@@ -18,6 +18,17 @@ public class TrackCoach implements com.luv2code.springdemo.Coach {
 
     @Override
     public String getDailyFortune() {
-        return "Just do it!" + fortuneService.getFortune();
+        return fortuneService.getFortune();
+    }
+
+    //add init method
+
+    public void startup(){
+        System.out.println("TrackCoach: inside startup method");
+    }
+
+    //add destroy method
+    public void cleanup(){
+        System.out.println("TrackCoach: inside cleanup method");
     }
 }
